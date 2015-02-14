@@ -4,10 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>"Fridge"</title>
-
+    <link rel="icon" 
+      type="image/png" 
+      href="images/favicon.ico">
     <!-- build:css styles/vendor.css -->
     <!-- <link rel="stylesheet" href="vendor/some.contrib.css"> -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="lib/ionic/release/css/ionic.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -18,17 +21,34 @@
 
   <body ng-app="Fridge">
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
+
+    <ion-nav-bar class="bar-positive">
+    </ion-nav-bar>
+    <ion-tabs class="tabs-positive">
+      <ion-tab icon="ion-home" ui-sref="home">
+        <ion-nav-view name="home"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab icon="ion-help" ui-sref="help">
+        <ion-nav-view name="help"></ion-nav-view>
+      </ion-tab>
+
+    </ion-tabs>
+
+
+
+   
 
     <!-- build:js scripts/vendor.js -->
     <!-- <script src="vendor/someContribJs.js"></script> -->
     <!-- bower:js -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="lib/collide/collide.js"></script>
+    <script src="lib/ionic/release/js/ionic.js"></script>
+    <script src="lib/ionic/release/js/ionic-angular.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
