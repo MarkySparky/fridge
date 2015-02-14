@@ -28,6 +28,39 @@ app.config(function($stateProvider, $urlRouterProvider) {
       }
     }
   });
+
+  $stateProvider.state('barcode', {
+    url: '/barcode',
+    views: {
+      help: {
+        templateUrl: 'templates/barcode.html'
+      }
+    }
+  });
+  $stateProvider.state('camera', {
+    url: '/camera',
+    views: {
+      help: {
+        templateUrl: 'templates/camera.html'
+      }
+    }
+  });
+  $stateProvider.state('keypad', {
+    url: '/keypad',
+    views: {
+      help: {
+        templateUrl: 'templates/keypad.html'
+      }
+    }
+  });
+  $stateProvider.state('microphone', {
+    url: '/microphone',
+    views: {
+      help: {
+        templateUrl: 'templates/microphone.html'
+      }
+    }
+  });
 });
 
 app.run(function($ionicPlatform) {
@@ -43,3 +76,4 @@ app.run(function($ionicPlatform) {
     }
   });
 });
+
