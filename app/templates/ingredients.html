@@ -1,11 +1,13 @@
 <ion-view title="What ya got?" class="home-page">
 
-    <div class="bar bar-subheader item-input-inset">
+    <ion-header-bar class="bar-positive bar bar-subheader item-input-inset">
         <label class="item-input-wrapper">
             <i class="icon ion-search placeholder-icon"></i>
-            <input ng-model="ingredients.search" type="text" placeholder="eggs, bacon, milk..." ui-keypress="{13:'searchForIngredient($event)'}">
+            <input ng-model="ingredients.search" type="text" placeholder="eggs, bacon, milk..." ui-keypress="{13:'addIngredient($event.srcElement.value)'}">
+
         </label>
-    </div>
+    </ion-header-bar>
+
 
     <ion-content padding="true">
         <ion-list>

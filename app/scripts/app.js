@@ -5,15 +5,19 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 
-var app = angular.module('Fridge', ['ionic', 'config', 'ui.utils']);
+var app = angular.module('Fridge', ['ngResource', 'ionic', 'config', 'ui.utils']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/home');
 
-    $stateProvider.state('app', {
-        abstract: true,
+    $stateProvider.state('main', {
+        abstract: false,
         url: '/',
-        templateUrl: 'templates/main.html',
+        views: {
+            main: {
+                templateUrl: 'templates/main.html'
+            }
+        }
     });
 
     $stateProvider.state('ingredients', {
@@ -40,23 +44,17 @@ app.config(function($stateProvider, $urlRouterProvider) {
     });
     $stateProvider.state('recipes', {
         url: '/recipes',
-        templateUrl: 'templates/recipes.html',
-        controller: 'RecipeController',
-        resolve: {
-            recipes: function($stateParams, RecipesService) {
-                return RecipesService.recipes
+        views: {
+            recipes: {
+                templateUrl: 'templates/recipes.html',
+                controller: 'RecipesController'
             }
         }
     });
     $stateProvider.state('recipes.detail', {
         url: '/:recipe',
         templateUrl: 'templates/recipes.html',
-        controller: 'RecipeController',
-        resolve: {
-            recipes: function($stateParams, RecipesService) {
-                return RecipesService.getRecipe($stateParams.recipe)
-            }
-        }
+        controller: 'RecipesController'
     });
 });
 

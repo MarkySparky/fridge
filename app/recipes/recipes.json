@@ -1,0 +1,11 @@
+[{
+    "name": "Toast with sausage and beans",
+    "method": "Toast the bread, grill the sausages and heat the beans. Place the toast on a trendy plate, stick the sausages on top, then smother with yummy beans.",
+    "ingredients": ["Bread", "Sausages", "Beans"],
+    "image": "/images/sausageandbeans.png"
+}, {
+    "name": "Spagetti Bolognese",
+    "method": "Cook off the mice in a little oil, cook the spagetti according for 10 mins, heat tomato sauce, then combine with mince. Lay spagetti on a plate, then pour the mince and tomatoes over it and say Mmmmmmmm",
+    "ingredients": ["Spagetti", "Tomatoes", "Mince"],
+    "image": "/images/spagbol.png"
+}]

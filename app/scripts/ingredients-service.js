@@ -1,9 +1,7 @@
 'use strict';
 app.factory('IngredientsService', function() {
 
-    var ingredients = [{
-        'name': 'eggs'
-    }, {
+    var list = [{
         'name': 'milk'
     }, {
         'name': 'bread'
@@ -14,8 +12,8 @@ app.factory('IngredientsService', function() {
     }]
 
     return {
-        ingredients: ingredients,
-        getIngredients: function(index) {
+        ingredients: list,
+        getIngredient: function(index) {
             return ingredients(index)
         }
     };

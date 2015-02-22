@@ -23,22 +23,21 @@
 
     </ion-nav-view>
 
-
     <ion-nav-bar class="bar-positive">
     </ion-nav-bar>
 
     <ion-tabs class="tabs-positive">
-        <ion-tab icon="ion-home" ui-sref="app">
+        <ion-tab icon="ion-home" ui-sref="main">
             <ion-nav-view name="main"></ion-nav-view>
         </ion-tab>
-        <ion-tab icon="ion-home" ui-sref="ingredients">
+        <ion-tab ng-controller="IngredientsController" badge="ingredientCount()" badge-style="badge-assertive" icon="ion-android-storage" ui-sref="ingredients">
             <ion-nav-view name="ingredients"></ion-nav-view>
         </ion-tab>
-        <ion-tab icon="ion-help" ui-sref="help">
+        <ion-tab icon="ion-help-circled" ui-sref="help">
             <ion-nav-view name="help"></ion-nav-view>
         </ion-tab>
 
-        <ion-tab icon="ion-home" ui-sref="recipes">
+        <ion-tab ng-controller="RecipesController" badge="recipesCount()" badge-style="badge-assertive" icon="ion-fork" ui-sref="recipes">
             <ion-nav-view name="recipes"></ion-nav-view>
         </ion-tab>
     </ion-tabs>
@@ -59,6 +58,7 @@
     <script src="lib/ionic/release/js/ionic-angular.js"></script>
     <script src="lib/ionic-ion-header-shrink/ionic.headerShrink.js"></script>
     <script src="lib/angular-ui-utils/ui-utils.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -71,7 +71,8 @@
     <script src="scripts/config.js"></script>
     <script src="scripts/ingredients-service.js"></script>
     <script src="scripts/ingredientscontroller.js"></script>
-    <script src="scripts/recipecontroller.js"></script>
+    <script src="scripts/recipes-service.js"></script>
+    <script src="scripts/recipescontroller.js"></script>
     <!-- endbuild -->
 </body>
 
