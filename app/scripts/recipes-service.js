@@ -15,7 +15,6 @@ app.factory('RecipesService', function($rootScope, $resource) {
     }
     resource.addRecipe = function(recipe) {
         allRecipes.unshift(recipe);
-        console.log(allRecipes);
     }
     resource.countAllRecipes = function() {
         return allRecipes.length;
@@ -27,15 +26,19 @@ app.factory('RecipesService', function($rootScope, $resource) {
         allRecipes = $recipes;
     }
     resource.searchRecipes = function(terms) {
-        console.log($rootScope.ingredients);
+        window.terms = terms;
+        console.log(terms);
+        var searchTerms = terms.map(function(term) {
+            return term.name;
+        }).join(' ');
+
+        console.log('Searching for ' + searchTerms);
         var fuse = new Fuse(allRecipes, {
             includeScore: true,
             maxPatternLength: 100,
             keys: ["method"]
         });
-        availableRecipes = fuse.search(terms);
-        console.log(availableRecipes);
-
+        availableRecipes = fuse.search(searchTerms);
     }
 
     return resource;

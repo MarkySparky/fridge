@@ -18,14 +18,12 @@ app.factory('IngredientsService', function($rootScope) {
         },
         deleteIngredient: function(ingredient) {
             var idx = list.indexOf(ingredient);
-            console.log(idx);
             list.splice(idx, 1);
             $rootScope.$broadcast('ingredients-changed', {
                 'list': this.ingredients
             });
         },
         addIngredient: function(ingredient) {
-            console.log(ingredient);
             this.ingredients.unshift({
                 'name': ingredient
             });

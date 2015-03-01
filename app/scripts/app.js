@@ -25,12 +25,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         views: {
             ingredients: {
                 templateUrl: 'templates/ingredients.html',
-                controller: 'IngredientsController',
-                resolve: {
-                    ingredients: function(IngredientsService) {
-                        return IngredientsService
-                    }
-                }
+                controller: 'IngredientsController'
             }
         }
     });
@@ -57,6 +52,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller: 'RecipesController'
     });
 });
+
 
 app.run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {

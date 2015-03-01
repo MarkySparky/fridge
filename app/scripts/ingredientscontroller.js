@@ -12,7 +12,6 @@ app.controller('IngredientsController', function($rootScope, $scope, $filter, In
     });
 
     vm.delete = function(ingredient) {
-        console.log('Deleting:' + ingredient.name);
         IngredientsService.deleteIngredient(ingredient);
     }
 
