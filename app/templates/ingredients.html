@@ -13,6 +13,9 @@
         <ion-list>
             <ion-item ng-repeat="ingredient in ingredients">
                 {{ingredient.name}}
+
+                <ion-option-button ng-click="delete(ingredient);" class="button-assertive">Delete</ion-option-button>
+
             </ion-item>
         </ion-list>
 

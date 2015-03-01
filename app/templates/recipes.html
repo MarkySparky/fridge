@@ -3,12 +3,11 @@
 
     <ion-content padding="true">
         <ion-list>
-            <ion-item ng-repeat="recipe in recipes">
-                {{recipe.name}}
+            <ion-item ng-repeat="recipe in availableRecipes()" class="item-thumbnail-left">
+                <img ng-src="{{recipe.item.image}}" class=""> {{recipe.item.name}}
             </ion-item>
         </ion-list>
 
     </ion-content>
-
 
 </ion-view>

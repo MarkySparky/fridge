@@ -1,5 +1,5 @@
 'use strict';
-app.factory('IngredientsService', function() {
+app.factory('IngredientsService', function($rootScope) {
 
     var list = [{
         'name': 'milk'
@@ -15,6 +15,24 @@ app.factory('IngredientsService', function() {
         ingredients: list,
         getIngredient: function(index) {
             return ingredients(index)
+        },
+        deleteIngredient: function(ingredient) {
+            var idx = list.indexOf(ingredient);
+            console.log(idx);
+            list.splice(idx, 1);
+            $rootScope.$broadcast('ingredients-changed', {
+                'list': this.ingredients
+            });
+        },
+        addIngredient: function(ingredient) {
+            console.log(ingredient);
+            this.ingredients.unshift({
+                'name': ingredient
+            });
+            $rootScope.$broadcast('ingredients-changed', {
+                'list': this.ingredients
+            });
+
         }
     };
 
