@@ -5,7 +5,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 
-var app = angular.module('Fridge', ['ngResource', 'ionic', 'config', 'ui.utils']);
+var app = angular.module('Fridge', ['ngResource', 'ionic', 'config', 'ui.utils', 'ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/home');

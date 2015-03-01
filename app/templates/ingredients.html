@@ -11,7 +11,7 @@
 
     <ion-content padding="true">
         <ion-list>
-            <ion-item ng-repeat="ingredient in ingredients">
+            <ion-item class="animate-repeat" ng-repeat="ingredient in ingredients">
                 {{ingredient.name}}
 
                 <ion-option-button ng-click="delete(ingredient);" class="button-assertive">Delete</ion-option-button>
