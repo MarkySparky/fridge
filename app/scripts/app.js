@@ -46,6 +46,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     });
+    $stateProvider.state('recipe', {
+        url: '/recipe/:id',
+        views: {
+            recipes: {
+                templateUrl: 'templates/recipe.html',
+                controller: 'RecipesController'
+            }
+        }
+    });
     $stateProvider.state('recipes.detail', {
         url: '/:recipe',
         templateUrl: 'templates/recipes.html',
