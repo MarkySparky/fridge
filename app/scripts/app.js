@@ -14,8 +14,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
         abstract: false,
         url: '/',
         views: {
-            main: {
-                templateUrl: 'templates/main.html'
+            ingredients: {
+                templateUrl: 'templates/ingredients.html',
+                controller: 'IngredientsController'
             }
         }
     });
@@ -29,14 +30,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     });
-    $stateProvider.state('help', {
-        url: '/help',
-        views: {
-            help: {
-                templateUrl: 'templates/help.html'
-            }
-        }
-    });
+
     $stateProvider.state('recipes', {
         url: '/recipes',
         views: {

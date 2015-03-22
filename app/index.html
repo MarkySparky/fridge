@@ -27,16 +27,9 @@
     </ion-nav-bar>
 
     <ion-tabs class="tabs-positive">
-        <ion-tab icon="ion-home" ui-sref="main">
-            <ion-nav-view name="main"></ion-nav-view>
-        </ion-tab>
         <ion-tab ng-controller="IngredientsController" badge="ingredientCount()" badge-style="badge-assertive" icon="ion-android-storage" ui-sref="ingredients">
             <ion-nav-view name="ingredients"></ion-nav-view>
         </ion-tab>
-        <ion-tab icon="ion-help-circled" ui-sref="help">
-            <ion-nav-view name="help"></ion-nav-view>
-        </ion-tab>
-
         <ion-tab ng-controller="RecipesController" badge="recipesCount()" badge-style="badge-assertive" icon="ion-fork" ui-sref="recipes">
             <ion-nav-view name="recipes"></ion-nav-view>
         </ion-tab>

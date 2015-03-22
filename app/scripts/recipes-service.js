@@ -3,17 +3,14 @@ app.factory('RecipesService', function($rootScope, $resource) {
 
     var allRecipes = [];
     var availableRecipes = [];
-    var foodtofork_api_key = 'd8bcfe3ea0d4c883d0b1cb1bfb9e3047';
-    var edamam_app_id = 'bb11dadc';
-    var edamam_app_key = 'c178df9de649d0ca31919cd6c6ee6814';
 
-    var edamam_url = "/rest/search?app_id=bb11dadc&app_key=c178df9de649d0ca31919cd6c6ee6814";
+    var recipe_url = "http://localhost:5000/edamam/";
 
     var sortOrder = 'r';
     window.rootScope = $rootScope;
 
 
-    var resource = $resource(edamam_url + '&q=:q', {}, {
+    var resource = $resource(recipe_url + ':q', {}, {
         'query': {
             'method': 'get',
             'isArray': false
